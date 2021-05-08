@@ -1,0 +1,122 @@
+.home {
+    background: radial-gradient(rgb(146, 26, 26), #471212);
+}
+
+.nav-container {
+    background: radial-gradient(rgb(146, 26, 26), #471212);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    .btn-about {
+        letter-spacing: 0.5rem;
+        background-color: #9D824D;
+        height: 5rem;
+        color: white;
+        border-radius: 1rem;
+        border: none;
+        transition: ease-out 0.5s;
+        font-size: 2rem;
+        outline: none;
+        position: relative;
+        z-index: 1;
+    }
+
+    .btn-about:hover {
+        cursor: pointer;
+        
+    }
+
+    .btn-about::before {
+        transition:  0.5s all ease;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        right: 50%;
+        bottom: 0;
+        opacity: 0;
+        content: "";
+        background-color: #beb196;
+    }
+
+    .btn-about:hover::before {
+        transition: 0.5s all ease;
+        left: 0;
+        right: 0;
+        opacity: 1;
+        z-index: -1;
+        border-radius: 1rem;
+        
+    }
+}
+
+nav {
+    width: 80%;
+    margin: auto;
+    min-height: 10vh;
+    padding: 1rem 0rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        flex: 1;
+        list-style: none;
+    }
+
+    li #about, #more {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 2rem 0 2rem;
+    }
+
+    #logo {
+        display: flex;
+        justify-content: space-between;
+        width: 10rem;
+        height: 10rem;
+    }
+    
+    #logo-space {
+        display: flex;
+        justify-content: space-between;
+        flex: 2;
+    }
+
+    #players {
+        background: red;
+        padding: 1rem 2rem 1.3rem;
+        border-radius: 2rem;
+    }
+
+}
+
+.show {
+    display: grid;
+    min-height: 80vh;
+    grid-template-columns: 10% repeat(3, minmax(5rem, 6fr)) 10%;
+    grid-template-rows: 0.25fr 1fr 0.5fr;
+
+    h2 {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        align-self: flex-start;
+    }
+
+    img{
+        grid-row: 2/3;
+        grid-column: 3/4;
+        height: 45rem;
+        object-fit: cover;
+        align-self: center;
+        justify-self: center;
+    }
+    
+    .info {
+        grid-row: 3/4;
+        grid-column: 4/5;
+        align-self: flex-end;
+    }
+}
